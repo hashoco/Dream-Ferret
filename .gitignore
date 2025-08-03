@@ -1,0 +1,19 @@
+# node_modules (클라이언트/서버 모두)
+client/node_modules/
+server/node_modules/
+
+# 환경변수
+*.env
+
+# 로그 파일
+*.log
+
+# 빌드 파일
+client/dist/
+
+# 업로드 파일 (운영 시에는 별도 S3 등으로 처리)
+uploads/
+
+# OS/IDE 관련 파일
+.DS_Store
+.vscode/
