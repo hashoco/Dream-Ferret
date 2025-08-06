@@ -50,9 +50,10 @@ const API_BASE = import.meta.env.VITE_API_BASE_URL;
       </div>
 
       {/* 메시지 영역 */}
-      <div className="flex-1 p-3 overflow-y-auto space-y-2 text-sm">
+      <div className="flex-1 p-3 overflow-y-auto space-y-2 text-sm" >
         {messages.map((msg, idx) => (
           <div
+          
             key={idx}
             className={`max-w-[80%] px-3 py-2 rounded-lg whitespace-pre-wrap ${
               msg.sender === 'user'

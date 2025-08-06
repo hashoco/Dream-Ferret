@@ -7,7 +7,7 @@ const router = express.Router();
 
 // ✅ 사용자별 최근 질문 시간 저장용 메모리 맵
 const lastQuestionTimestamps = new Map();
-const QUESTION_COOLDOWN_MS = 60000; // 1분 간격 제한
+const QUESTION_COOLDOWN_MS = 30000; // 1분 간격 제한
 
 router.post('/', async (req, res) => {
   try {
@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
     const last = lastQuestionTimestamps.get(userKey);
 
     if (last && now - last < QUESTION_COOLDOWN_MS) {
-      const waitSec = ((QUESTION_COOLDOWN_MS - (now - last)) / 1000).toFixed(1);
+      const waitSec = Math.ceil((QUESTION_COOLDOWN_MS - (now - last)) / 1000);
       return res.status(429).json({
         answer: `⏳ 너무 빠르게 질문하고 있어요. ${waitSec}초 후에 다시 시도해주세요.`,
       });
@@ -35,6 +35,7 @@ router.post('/', async (req, res) => {
     const { name, type } = await parseQuestion(message);
     let gptPrompt = '';
 
+    
     if (type === 'birth') {
       const result = await db.query(
         `SELECT birthday FROM ferret_profiles WHERE name = $1`,

@@ -20,7 +20,7 @@ export default function SnsFloatingBar() {
           카톡
         </a>
         */}
-        <a href="https://cafe.naver.com/ferretattic" className="flex flex-col items-center hover:text-orange-400">
+        <a target="_blank" href="https://cafe.naver.com/ferretattic" className="flex flex-col items-center hover:text-orange-400">
           <PawPrint className="w-6 h-6 mb-1" />
           카페
         </a>
@@ -49,7 +49,7 @@ export default function SnsFloatingBar() {
           톡
         </a>
         */ }
-        <a href="https://cafe.naver.com/ferretattic" className="flex flex-col items-center text-xs hover:text-orange-500">
+        <a target="_blank" href="https://cafe.naver.com/ferretattic" className="flex flex-col items-center text-xs hover:text-orange-500">
           <PawPrint className="w-5 h-5" />
           카페
         </a>
