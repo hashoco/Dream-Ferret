@@ -9,7 +9,7 @@ import uploadExtraRouter from './routes/uploadExtra.js';
 import extraImageRouter from './routes/extraImage.js';
 import likeRoutes from './routes/like.js';
 import commentRoutes from './routes/comments.js';
-import commentsRouter from './routes/comments.js';
+//import commentsRouter from './routes/comments.js';
 import ferretInfoRoutes from './routes/ferretInfo.js';
 import mcpRouter from './routes/mcp.js';
 
@@ -24,14 +24,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // ✅ 라우터 등록
-app.use('/auth/naver', naverAuthRouter);
+app.use('/api/auth/naver', naverAuthRouter);
 app.use('/api', uploadRoutes);           // /api/upload
 app.use('/api', registeFerretRouter);    // /api/profiles
 app.use('/api', uploadExtraRouter);      // /api/upload-extra
 app.use('/api', extraImageRouter);
 app.use('/api/likes', likeRoutes);
 app.use('/api/comments', commentRoutes);
-app.use('/api', commentsRouter);
+//app.use('/api', commentsRouter);
 app.use('/api/ferret', ferretInfoRoutes);
 app.use('/api/mcp', mcpRouter);
 // ✅ 서버 실행

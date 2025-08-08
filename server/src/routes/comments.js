@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
 });
 
 // DELETE /api/comments/:id
-router.delete('/comments/:id', async (req, res) => {
+router.delete('/:id', async (req, res) => {
   const commentId = req.params.id;
 
   try {

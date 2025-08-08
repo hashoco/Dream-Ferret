@@ -9,9 +9,9 @@ export default function Header() {
   const API_BASE = import.meta.env.VITE_API_BASE_URL;
   
   
-  //console.log('API_BASE:', import.meta.env.VITE_API_BASE_URL);
+  console.log(`${API_BASE}/api/auth/naver/login`);
   const handleLogin = () => {
-    window.location.href = `${API_BASE}/auth/naver/login`;
+    window.location.href = `${API_BASE}/api/auth/naver/login`;
   };
   return (
     <header className="bg-white border-b border-[#e6dac5] shadow-sm sticky top-0 z-50">
