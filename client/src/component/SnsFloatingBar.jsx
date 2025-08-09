@@ -29,7 +29,7 @@ export default function SnsFloatingBar() {
           인스타
         </a>
         <button
-          onClick={() => alert("업데이트 중입니다")}
+          onClick={() => alert("지도기능 업데이트 중입니다")}
           className="flex flex-col items-center text-gray-500 hover:text-orange-400"
         >
           <MapPin className="w-6 h-6 mb-1" />
