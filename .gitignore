@@ -1,43 +1,29 @@
-# node_modules (클라이언트/서버 모두)
-client/node_modules/
-server/node_modules/
-
-# 환경변수
-*.env
-
-# 로그 파일
-*.log
-
-# 빌드 파일
-client/dist/
-
-# 업로드 파일 (운영 시에는 별도 S3 등으로 처리)
-uploads/
-
-# OS/IDE 관련 파일
-.DS_Store
-.vscode/
-
-#aws계정정보
-#awsyang91@gmail.com
-#yang.env
-db/backup*
-# --- deploy ignores (2025-08-09) ---
-.env
-server/.env
-client/.env.local
-client/.env.production.local
-
-# builds
+# Node modules & logs
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+logs/
+
+# Build outputs
 dist/
 client/dist/
 
-# uploads & db dumps
-uploads/
+# Env files (keep out of git)
+.env
+server/.env
+client/.env.local
+client/.env.production
+client/.env.production.local
+
+# Docker overrides (optional)
+docker-compose.override.yml
+
+# DB dumps / backups
 db/*
 !db/.gitkeep
 
-# logs
-*.log
-# --- end ---
+# Uploads
+uploads/
