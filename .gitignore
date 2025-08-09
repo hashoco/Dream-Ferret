@@ -20,4 +20,24 @@ uploads/
 
 #aws계정정보
 #awsyang91@gmail.com
-#yang
+#yang.env
+db/backup*
+# --- deploy ignores (2025-08-09) ---
+.env
+server/.env
+client/.env.local
+client/.env.production.local
+
+# builds
+node_modules/
+dist/
+client/dist/
+
+# uploads & db dumps
+uploads/
+db/*
+!db/.gitkeep
+
+# logs
+*.log
+# --- end ---
